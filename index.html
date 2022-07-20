@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+        <link rel="stylesheet" href="./develop/style.css">
+    </head>
+	<body>
+		<div class="header" style="display:flex;text-align:center;">
+			<div style="margin:auto;">
+				<h1 class="mb-3 center" style="margin:auto;position:fixed;left:50%;transform:translate(-50%, -50%);">JavaScript Timed Quiz</h1>
+			</div>
+			<div class="wrapper_timer" style="display:flex;float:right;margin-right:20px;">
+				<i class="far fa-clock" style="font-size:30px;margin-top:10px;margin-right:5px;"></i><h1 class="mb-3 timer">0:30</h1>
+				<span id="penalty" class="mb-3" style="color:#ff7675;font-size:30px;display:none;">-0:15</span><br>
+				<table id="tbl_results" style="border:1px solid #ccc;border-radius:5px;position:fixed;top:50px;width:120px;text-align:left;">
+					<tbody></tbody>
+				</table>
+			</div>
+		</div>
+		<div id="wrapper_questions" style="text-align:center;">
+			<div id="pre_test" style="background-image: linear-gradient(to right, #aaa , #ccc);width:400px;margin:auto;border-radius:5px"></div>
+			<section data-q="1" data-i="0">
+				<h3>What is 2+2?</h3>
+				<input type="radio" id="q1a1" name="q1" value="a">
+				<label for="q1a1">2</label><br>
+				<input type="radio" id="q1a2" name="q1" value="b">
+				<label for="q1a2">4</label><br>
+				<input type="radio" id="q1a3" name="q1" value="c">
+				<label for="q1a3">6</label><br>
+				<input type="radio" id="q1a4" name="q1" value="d">
+				<label for="q1a4">8</label><br>
+			</section>
+			<section data-q="2" data-i="1">
+				<h3>What is 8+2?</h3>
+				<input type="radio" id="q2a1" name="q1" value="a">
+				<label for="q2a1">4</label><br>
+				<input type="radio" id="q2a2" name="q2" value="b">
+				<label for="q2a2">6</label><br>
+				<input type="radio" id="q2a3" name="q2" value="c">
+				<label for="q2a3">8</label><br>
+				<input type="radio" id="q2a4" name="q2" value="d">
+				<label for="q2a4">10</label><br>
+			</section>
+			<section data-q="3" data-i="2">
+				<h3>What is 8+8?</h3>
+				<input type="radio" id="q3a1" name="q3" value="a">
+				<label for="q3a1">12</label><br>
+				<input type="radio" id="q3a2" name="q3" value="b">
+				<label for="q3a2">14</label><br>
+				<input type="radio" id="q3a3" name="q3" value="c">
+				<label for="q3a3">16</label><br>
+				<input type="radio" id="q3a4" name="q3" value="d">
+				<label for="q3a4">18</label><br>
+			</section>
+			<section data-q="4" data-i="3">
+				<h3>What is 10+10?</h3>
+				<input type="radio" id="q4a1" name="q4" value="a">
+				<label for="q4a1">20</label><br>
+				<input type="radio" id="q4a2" name="q4" value="b">
+				<label for="q4a2">30</label><br>
+				<input type="radio" id="q4a3" name="q4" value="c">
+				<label for="q4a3">45</label><br>
+				<input type="radio" id="q4a4" name="q4" value="d">
+				<label for="q4a4">100</label><br>
+			</section>
+			<div id="div_results" style="display:none;">
+				<h4>Results</h4>
+				<table style="margin:auto;">
+					<tbody>
+						<tr>
+							<td>Total Questions: </td>
+							<td id="countTotal"></td>
+						</tr>
+						<tr>
+							<td>Total Correct: </td>
+							<td id="countCorrect"></td>
+						</tr>
+						<tr>
+							<td>Percentage Score: </td>
+							<td id="countPercentage"></td>
+						</tr>
+					</tbody>
+				</table>
+				<label for="txt_initials">Initials: </label>
+				<input type="text" id="txt_initials" maxlength="3" />
+			</div>
+			<button id="btn_start" type="button" class="btn btn-primary btn-lg" style="margin-top:20px;">Start Quiz</button>
+			<button id="btn_next" type="button" class="btn btn-warning btn-lg" style="margin-top:20px;">Next</button>
+			<button id="btn_end" type="button" class="btn btn-success btn-lg" style="margin-top:20px;">Finish Quiz</button>
+			<button id="btn_submit" type="button" class="btn btn-info btn-lg" style="margin-top:20px;">Submit Results</button>
+			<button id="btn_restart" type="button" class="btn btn-dark btn-lg" style="margin-top:20px;">Restart Test</button>
+		</div>
+        <script src="./develop/style.js"></script>
+	</body>
+</html>

@@ -1,0 +1,6 @@
+section, #btn_end, #btn_next, #btn_submit, #btn_restart { 
+    display:none; 
+}
+section, #pre_test { 
+    height: 140px; 
+}
